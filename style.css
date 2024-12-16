@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://cdnb.artstation.com/p/assets/images/images/030/886/415/4k/chengwei-pan-1.jpg?1601960850') no-repeat center center fixed; /* Nowe tło Lee Sina */
+    background-size: cover; /* Dopasowuje tło do całego ekranu */
+    color: white; /* Kolor tekstu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ustawia pełny viewport height */
+}
+
+.key-container.correct {
+    animation: jump 0.3s ease-in-out;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Brak przesunięcia na początku */
+    }
+    30% {
+        transform: translateY(-10px); /* W górę o 10px */
+    }
+    60% {
+        transform: translateY(0); /* Powrót do pozycji początkowej */
+    }
+}
+
+#combo-container {
+    background: rgba(0, 0, 0, 0.6); /* Lekka przezroczystość kontenera */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1; /* Przesuwa zawartość nad tłem */
+    text-align: center;
+}
+#completion-time {
+    color: green; /* Kolor tekstu na zielono */
+    font-size: 18px; /* Dostosowanie rozmiaru tekstu */
+    font-weight: bold; /* Wyróżnienie tekstu */
+}
+
+#completion-message {
+    color: green; /* Kolor tekstu na zielono */
+    font-size: 18px; /* Dostosowanie rozmiaru tekstu */
+    font-weight: bold; /* Wyróżnienie tekstu */
+    display: none; /* Ukrywa komunikat początkowo */
+}
+
+#timer {
+    font-size: 20px;
+}
+
+.key-container {
+    display: inline-block;
+    margin: 15px; /* Zwiększono marginesy dla większej przestrzeni wokół kafelków */
+    padding: 20px; /* Zachowaj marginesy wewnętrzne, jeśli potrzebne */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 60px; /* Zwiększenie szerokości kafelka */
+    height: 60px; /* Zwiększenie wysokości kafelka */
+    background-size: 100px; /* Zachowanie tła w odpowiednich proporcjach */
+    background-position: center; /* Środek tła */
+    background-repeat: no-repeat; /* Nie powtarzaj tła */
+    color: transparent; /* Ukrywa tekst w buttonach */
+}
+
+.key-label {
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+}
